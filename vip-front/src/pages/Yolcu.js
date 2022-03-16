@@ -18,7 +18,15 @@ class Yolcu extends Component{
             });
         }
     }
-
+    YolcuSil= async (e,id)=>{
+        const clicked = e.currentTarget;
+        clicked.innerText="Siliniyor"
+        const res= await axios.delete(`http://127.0.0.1:8000/api/yolcu_sil/${id}`);
+        if(res.data.status===200){
+            clicked.closest("tr").remove();
+            console.log(res.data.message);
+        }
+    }
     render(){
         var yolcu_HTMLTABLE=""
         if(this.state.loading){
@@ -42,7 +50,7 @@ class Yolcu extends Component{
                            </Link> 
                         </td>
                         <td>
-                            <button type="button"className='btn btn-danger btn-sm'>Sil</button>
+                            <button type="button" onClick={(e)=>this.YolcuSil(e,item.id)} className='btn btn-danger btn-sm'>Sil</button>
 
                         </td>  
                     </tr>
