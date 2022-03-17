@@ -21,9 +21,6 @@ function Navbar ()
                                 <Link className="nav-link" to="/araclar">Araçlar</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/suruculer">Sürücüler</Link>
-                            </li>
-                            <li className="nav-item">
                                 <Link className="nav-link" to="/transferler">Transferler</Link>
                             </li>
                         </ul>

@@ -4,8 +4,8 @@ import Yolcu from './pages/Yolcu';
 import YolcuEkle from './pages/YolcuEkle';
 import YolcuDuzenle from './pages/YolcuDuzenle';
 import Araclar from './pages/Araclar';
-import Suruculer from './pages/Suruculer';
 import Transferler from './pages/Transferler';
+import AracEkle from "./pages/AracEkle";
 import Navbar from './pages/Navbar';
 function App() {
   return (
@@ -16,8 +16,8 @@ function App() {
               <Route path ='/Yolcu_Ekle' component={YolcuEkle}/>
               <Route path='/Yolcu_duzenle/:id'component={YolcuDuzenle}/>
               <Route path='/araclar'component={Araclar}/>
-              <Route path='/suruculer'component={Suruculer}/>
               <Route path='/transferler'component={Transferler}/>
+              <Route path='/Arac_ekle'component={AracEkle}/>
           </Switch>
      </Router>
   );
