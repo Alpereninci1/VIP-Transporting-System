@@ -39,8 +39,8 @@ class AracEkle extends Component{
                         <div className='card'>
                             <div className='card-header'>
                                 <h4>
-                                    Arac Ekle
-                                    <Link to={'/'}className="btn btn-primary btn-sm float-end">Geri</Link>
+                                    Araç Ekle
+                                    <Link to={'/araclar'}className="btn btn-primary btn-sm float-end">Geri</Link>
                                 </h4>
                             </div>
 

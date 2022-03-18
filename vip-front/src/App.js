@@ -6,6 +6,7 @@ import YolcuDuzenle from './pages/YolcuDuzenle';
 import Araclar from './pages/Araclar';
 import Transferler from './pages/Transferler';
 import AracEkle from "./pages/AracEkle";
+import AracDuzenle from './pages/AracDuzenle';
 import Navbar from './pages/Navbar';
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
               <Route path='/araclar'component={Araclar}/>
               <Route path='/transferler'component={Transferler}/>
               <Route path='/Arac_ekle'component={AracEkle}/>
+              <Route path='/Arac_duzenle/:id'component={AracDuzenle}/>
           </Switch>
      </Router>
   );
