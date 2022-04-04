@@ -23,7 +23,7 @@ class  AracDuzenle extends Component{
             this.setState({
                 marka: res.data.arac.marka,
                 plaka:res.data.arac.plaka,
-                surucu:res.data.araca.surucu,
+                surucu:res.data.arac.surucu,
             });
         }
 
@@ -33,6 +33,7 @@ class  AracDuzenle extends Component{
         document.getElementById('updatebtn').disabled=true;
         document.getElementById('updatebtn').innerText="Güncelleniyor";
         const arac_id=this.props.match.params.id;
+        console.log(arac_id);
         const res = await axios.put(`http://127.0.0.1:8000/api/Arac_Guncelle/${arac_id}`,this.state)
         if(res.data.status===200){
             console.log(res.data.message);

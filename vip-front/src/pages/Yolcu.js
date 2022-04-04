@@ -44,7 +44,8 @@ class Yolcu extends Component{
                         <td>{item.ad}</td>
                         <td>{item.soyad}</td>
                         <td>{item.numara}</td>
-                        <td>{item.tip}</td> 
+                        <td>{item.tip}</td>
+
                         <td>
                            <Link to ={`Yolcu_duzenle/${item.id}`} className="btn btn-success btn-sm">Düzenle
                            </Link> 

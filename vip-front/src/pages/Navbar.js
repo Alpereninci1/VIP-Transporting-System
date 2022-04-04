@@ -23,6 +23,7 @@ function Navbar ()
                             <li className="nav-item">
                                 <Link className="nav-link" to="/transferler">Transferler</Link>
                             </li>
+
                         </ul>
                     </div>
                 </div>

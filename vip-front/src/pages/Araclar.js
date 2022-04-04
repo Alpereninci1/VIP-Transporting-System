@@ -48,10 +48,12 @@ class Araclar extends Component{
                             <Link to ={`arac_duzenle/${item.id}`} className="btn btn-success btn-sm">Düzenle
                             </Link>
                         </td>
+
                         <td>
                             <button type="button" onClick={(e)=>this.AracSil(e,item.id)} className='btn btn-danger btn-sm'>Sil</button>
 
                         </td>
+
                     </tr>
                 )
             });
@@ -64,7 +66,7 @@ class Araclar extends Component{
                         <div className="card">
                             <div className="card-header">
                                 <h4>
-                                    Araclar
+                                    Araçlar
                                     <Link to={"./Arac_Ekle"}className="btn btn-primary btn-sm float-end">Araç Ekle</Link>
                                 </h4>
                             </div>

@@ -7,7 +7,10 @@ import Araclar from './pages/Araclar';
 import Transferler from './pages/Transferler';
 import AracEkle from "./pages/AracEkle";
 import AracDuzenle from './pages/AracDuzenle';
+import TransferDuzenle from "./pages/TransferDuzenle";
+import TransferEkle from "./pages/TransferEkle";
 import Navbar from './pages/Navbar';
+
 function App() {
   return (
       <Router>
@@ -18,8 +21,11 @@ function App() {
               <Route path='/Yolcu_duzenle/:id'component={YolcuDuzenle}/>
               <Route path='/araclar'component={Araclar}/>
               <Route path='/transferler'component={Transferler}/>
+              <Route path='/Transfer_ekle'component={TransferEkle}/>
+              <Route path='/Transfer_duzenle/:id'component={TransferDuzenle}/>
               <Route path='/Arac_ekle'component={AracEkle}/>
               <Route path='/Arac_duzenle/:id'component={AracDuzenle}/>
+
           </Switch>
      </Router>
   );
