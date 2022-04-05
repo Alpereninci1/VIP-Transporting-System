@@ -3,6 +3,7 @@
 use App\Http\Controllers\API\YolcuController;
 use App\Http\Controllers\API\AracController;
 use App\Http\Controllers\API\TransferController;
+use App\Http\Controllers\API\UserAuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -25,6 +26,21 @@ Route::get('/Transfer_duzenle/{id}',[TransferController::class,'edit']);
 Route::put('/Transfer_Guncelle/{id}',[TransferController::class,'update']);
 Route::delete('transfer_sil/{id}',[TransferController::class,'destroy']);
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+Route::post('register',[UserAuthController::class,'register']);
+Route::post('login',[UserAuthController::class,'login']);
+
+Route::middleware('auth:api')->group(function () {
+    Route::resource('yolcular', YolcuController::class);
+});
+
+Route::middleware('auth:api')->group(function () {
+    Route::resource('araclar', AracController::class);
+});
+
+Route::middleware('auth:api')->group(function () {
+    Route::resource('transferler', TransferController::class);
+});
+
+Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
